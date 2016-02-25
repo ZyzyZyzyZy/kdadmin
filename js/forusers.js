@@ -321,12 +321,12 @@ function zw()
     var neirong="[上政代取快递服务]亲爱的用户您好,您的快递订单已经收到,快递员预计在中午给您送来.快递员:"+shyphone;
     //alert(neirong);
     if(confirm("预计中午送货,确认发送短信吗?")){
-        //Bmob.Sms.requestSms({"mobilePhoneNumber":userphone,"content": neirong} ).then(function(obj) {
-        //    alert("发送成功"); //
-        //}, function(err){
-        //    alert("发送失败,请手动发送");
-        //});
-        alert(userphone+neirong);
+        Bmob.Sms.requestSms({"mobilePhoneNumber":userphone,"content": neirong} ).then(function(obj) {
+            alert("发送成功"); //
+        }, function(err){
+            alert("发送失败,请手动发送");
+        });
+        //alert(userphone+neirong);
     }else{
 
     }
@@ -342,12 +342,12 @@ function ws(){
     var neirong="[上政代取快递服务]亲爱的用户您好,您的快递订单已经收到,快递员预计在晚上给您送来.快递员:"+shyphone;
     //alert(neirong);
     if(confirm("预计晚上送货,确认发送短信吗?")){
-        //Bmob.Sms.requestSms({"mobilePhoneNumber":userphone,"content": neirong} ).then(function(obj) {
-        //    alert("发送成功"); //
-        //}, function(err){
-        //    alert("发送失败,请手动发送");
-        //});
-        alert(userphone+neirong);
+        Bmob.Sms.requestSms({"mobilePhoneNumber":userphone,"content": neirong} ).then(function(obj) {
+            alert("发送成功"); //
+        }, function(err){
+            alert("发送失败,请手动发送");
+        });
+        //alert(userphone+neirong);
 
     }else{
 
@@ -363,12 +363,12 @@ function qr(){
     var neirong="[上政代取快递服务]亲爱的用户您好,您的快递已经给您送达,请尽快确认订单.快递员:"+shyphone;
     //alert(neirong);
     if(confirm("确认提醒用户确认订单吗?")){
-        //Bmob.Sms.requestSms({"mobilePhoneNumber":userphone,"content": neirong} ).then(function(obj) {
-        //    alert("发送成功"); //
-        //}, function(err){
-        //    alert("发送失败,请手动发送");
-        //});
-        alert(userphone+neirong);
+        Bmob.Sms.requestSms({"mobilePhoneNumber":userphone,"content": neirong} ).then(function(obj) {
+            alert("发送成功"); //
+        }, function(err){
+            alert("发送失败,请手动发送");
+        });
+        //alert(userphone+neirong);
 
     }else{
 
@@ -384,12 +384,12 @@ function kd(){
     var neirong="[上政代取快递服务]主人主人,我已经上路啦,预计3分钟后到你楼下哦,请下来接我,如果你不在我只能先寄放在大叔/阿姨那里啦.快递员:"+shyphone;
     //alert(neirong);
     if(confirm("确认提醒用户快递即将到达吗?")){
-        //Bmob.Sms.requestSms({"mobilePhoneNumber":userphone,"content": neirong} ).then(function(obj) {
-        //    alert("发送成功"); //
-        //}, function(err){
-        //    alert("发送失败,请手动发送");
-        //});
-        alert(userphone+neirong);
+        Bmob.Sms.requestSms({"mobilePhoneNumber":userphone,"content": neirong} ).then(function(obj) {
+            alert("发送成功"); //
+        }, function(err){
+            alert("发送失败,请手动发送");
+        });
+        //alert(userphone+neirong);
 
     }else{
 
@@ -407,12 +407,12 @@ function  cw(){
     var neirong="[上政代取快递服务]用户您好,单号:"+danhao+"的取货码/密码有错,请你检查以后重新发送给快递员,快递员:"+shyphone;
     //alert(neirong);
     if(confirm("确认提醒用户取货码/密码有错吗?")){
-        //Bmob.Sms.requestSms({"mobilePhoneNumber":userphone,"content": neirong} ).then(function(obj) {
-        //    alert("发送成功"); //
-        //}, function(err){
-        //    alert("发送失败,请手动发送");
-        //});
-        alert(userphone+neirong);
+        Bmob.Sms.requestSms({"mobilePhoneNumber":userphone,"content": neirong} ).then(function(obj) {
+            alert("发送成功"); //
+        }, function(err){
+            alert("发送失败,请手动发送");
+        });
+        //alert(userphone+neirong);
 
     }else{
 
