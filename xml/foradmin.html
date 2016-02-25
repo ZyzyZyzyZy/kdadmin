@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-theme.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+    <title>上政快递服务</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/foradmin.js"></script>
+    <script src="../js/bmob/bmob.js"></script>
+    <script src="../js/bmob/bmob-min.js"></script>
+</head>
+<body>
+<h1 id="rs"></h1>
+<table class="table table-striped" id="biaoge">
+    <caption id="time" style="align-items: center;">详细信息</caption>
+    <thead>
+    <tr>
+        <th>送货人</th>
+        <th>接单数</th>
+        <th>未确认</th>
+        <th>确认数</th>
+        <th>取消数</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+<button id="shuaxin"  style="margin-top: 20px" onclick="window.location.href='foradmin.html'" class="btn bg-info btn-block">刷新</button>
+<!--<button id="chongzhi"  style="margin-top: 20px" onclick="chongzhi()" class="btn bg-info btn-block">重置单号</button>-->
+<button id="tuichu"  style="margin-top: 20px" onclick="zhuxiao()" class="btn bg-info btn-block">注销</button>
+
+
+<table class="table table-striped" id="biaoge2">
+    <caption  style="align-items: center;">未确认信息</caption>
+    <thead>
+    <tr>
+        <th>单号</th>
+        <th>用户名</th>
+        <th>用户手机号</th>
+        <th>下单时间</th>
+
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-theme.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+    <title>上政快递服务</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/forusers.js"></script>
+    <script src="../js/bmob/bmob.js"></script>
+    <script src="../js/bmob/bmob-min.js"></script>
+</head>
+<body>
+<h3 id="name"></h3>
+<table class="table table-striped" id="biaoge">
+    <caption id="dingdan" style="align-items: center;">当前订单</caption>
+    <thead>
+    <tr>
+        <th>单号</th>
+        <th>用户名</th>
+        <th>住址</th>
+        <th>下单时间</th>
+
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+<button  onclick="window.location.href='forusers.html'" type="button" class="btn btn-success btn-block">刷新</button><br>
+<button id="xxzx" onclick="zhuxiao()" type="button" class="btn btn-warning btn-block">注销</button><br>
+    <div id="div1" class="panel panel-primary">
+        <div id="xxxx" class="panel-heading">
+            <h3 class="panel-title">详细信息</h3>
+        </div>
+        <div id="div2" class="panel-body">
+
+        </div>
+    </div>
+<br>
+<!--<button  onclick="window.location.href='forusers.html'" type="button" class="btn btn-success btn-block">刷新</button>-->
+<div style="margin-bottom: 10px">
+    <h4 id="h2" style="float: left">预计送达时间</h4>
+    <button id="zhongwu" type="button" class="btn bg-success btn-lg" onclick="zw()">中午</button>
+    <button id="wanshang" type="button" class="btn bg-success btn-lg" onclick="ws()">晚上</button>
+</div>
+<button id="wkdl" type="button" class="btn btn-primary btn-block" onclick="cw()">取货码错误提醒</button><br>
+<button id="wkdl" type="button" class="btn btn-primary btn-block" onclick="kd()">我快到了</button><br>
+<button id="txqr" type="button" class="btn btn-primary btn-block" onclick="qr()">提醒确认</button><br>
+<!--<button id="wkdl" type="button" class="btn btn-primary btn-block">我快到了</button><br>-->
+<!--<button  onclick="window.location.href='forusers.html'" type="button" class="btn btn-success btn-block">刷新</button><br>-->
+<!--<button id="xxzx" onclick="zhuxiao()" type="button" class="btn btn-warning btn-block">注销</button>-->
+<table class="table table-striped" id="biaoge2">
+    <caption id="q" style="align-items: center;">已确认订单</caption>
+    <thead>
+    <tr>
+        <th>单号</th>
+        <th>用户名</th>
+        <th>住址</th>
+        <th>下单时间</th>
+
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+<table class="table table-striped" id="biaoge3">
+    <caption id="qx" style="align-items: center;">已取消订单</caption>
+    <thead>
+    <tr>
+        <th>单号</th>
+        <th>用户名</th>
+        <th>住址</th>
+        <th>下单时间</th>
+
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+</body>
+</html>
