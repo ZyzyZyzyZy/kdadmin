@@ -16,7 +16,8 @@ window.onload=
         var y4=document.getElementById("zhongwu");
         var y5=document.getElementById("wanshang");
         //var y4=document.getElementById("div1");
-
+        var y6=document.getElementById("cwtx");
+        y6.style.visibility="hidden";
         //y1.style.visibility="hidden";
         y1.style.visibility="hidden";
         y2.style.visibility="hidden";
@@ -268,11 +269,14 @@ function dianji(obj){
         var y3=document.getElementById("wkdl");
         var y4=document.getElementById("zhongwu");
         var y5=document.getElementById("wanshang");
+        var y6=document.getElementById("cwtx");
+
         y1.style.visibility="hidden";
         y2.style.visibility="hidden";
         y3.style.visibility="hidden";
         y4.style.visibility="hidden";
         y5.style.visibility="hidden";
+        y6.style.visibility="hidden";
 
     }else{
         var y1=document.getElementById("h2");
@@ -280,6 +284,9 @@ function dianji(obj){
         var y3=document.getElementById("wkdl");
         var y4=document.getElementById("zhongwu");
         var y5=document.getElementById("wanshang");
+        var y6=document.getElementById("cwtx");
+        y6.style.visibility="visible";
+
         //y1.style.visibility="visible";
         y1.style.visibility="visible";
         y2.style.visibility="visible";
