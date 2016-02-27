@@ -58,6 +58,7 @@ window.onload=
                   var guitaihao=object.get("guitaihao");
                   var linkurl=object.get("linkurl");
                   var louhao=object.get("number");
+                  var beizhu=object.get("beizhu");
 
                   var id1="danhao"+ i.toString();
                   var id2="zhuzhi"+ i.toString();
@@ -69,6 +70,8 @@ window.onload=
                   var id8="guitaihao"+ i.toString();
                   var id9="linkurl"+ i.toString();
                   var id10="louhao"+ i.toString();
+                  var id11="beizhu"+ i.toString();
+
                   var h=i+1;
 
                   sessionStorage.setItem(id1,danhao);
@@ -80,6 +83,7 @@ window.onload=
                   sessionStorage.setItem(id7,yonghuming);
                   sessionStorage.setItem(id9,linkurl);
                   sessionStorage.setItem(id10,louhao);
+                  sessionStorage.setItem(id11,beizhu);
 
                   sessionStorage.setItem("length",results.length);
 
@@ -300,7 +304,7 @@ function dianji(obj){
      var id2=parseInt(sessionStorage.getItem("dianjiid"))-1;
     var neirong="取件方式:"+sessionStorage.getItem("guitaihao"+id2.toString())+"   联系方式:"+sessionStorage.getItem("userphone"+id2.toString())+"    取货码:"+sessionStorage.getItem("quhuoma"+id2.toString())
         +"    具体住址:"+sessionStorage.getItem("zhuzhi"+id2.toString())+sessionStorage.getItem("louhao"+id2.toString())+
-            "号楼"+"   校园卡:"+sessionStorage.getItem("url"+id2.toString())+"  备注:"+sessionStorage.getItem("beizhu"+id2.toString());
+            "号楼"+"   校园卡:"+sessionStorage.getItem("linkurl"+id2.toString())+"  备注:"+sessionStorage.getItem("beizhu"+id2.toString());
     var shuru=document.getElementById("div2");
     shuru.innerHTML=neirong;
 
