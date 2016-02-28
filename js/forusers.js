@@ -387,7 +387,7 @@ function kd(){
     var n2="shyphone"+id.toString();
     var userphone=sessionStorage.getItem(n1);
     var shyphone=sessionStorage.getItem(n2);
-    var neirong="这里是上政代取快递服务,主人主人,我已经上路啦,预计3分钟后到你楼下哦,请下来接我,如果你不在我只能先寄放在大叔/阿姨那里啦.快递员:"+shyphone;
+    var neirong="这里是上政代取快递服务,主人主人,我已经到您的楼下啦,请下来接我,如果你3分钟内不出现我只能被寄放在大叔/阿姨那里啦.快递员:"+shyphone;
     //alert(neirong);
     if(confirm(userphone+neirong)){
         Bmob.Sms.requestSms({"mobilePhoneNumber":userphone,"content": neirong} ).then(function(obj) {
