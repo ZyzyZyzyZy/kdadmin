@@ -153,7 +153,7 @@ function people1(){
 
 
 function people2(){
-    var name="李显超";
+    var name="柏朝玲";
     var QueRen = Bmob.Object.extend("All");
     var query = new Bmob.Query(QueRen);
     var querenshu;
@@ -168,7 +168,7 @@ function people2(){
             jiedanshu=results.length;
             for (var i = 0; i < results.length; i++) {
 
-                var object = results[i]
+                var object = results[i];
                 localStorage.setItem("data", results[i].updatedAt);
 
                 if (localStorage.getItem("data") > startdata && localStorage.getItem("data") < enddata) {
@@ -222,12 +222,88 @@ function people2(){
     var tb = document.getElementById("biaoge");
     var nh = tb.insertRow();
     var nl = nh.insertCell();
-    var innerTD = "<tr id='2' onclick='dianji(this)'style='color: black'"+"><td>"+"李显超"+"</td><td>"+localStorage.getItem("jd2")+"</td><td>"+localStorage.getItem("wq2")+"</td><td>"+localStorage.getItem("qr2")+"</td><td>"+
+    var innerTD = "<tr id='2' onclick='dianji(this)'style='color: black'"+"><td>"+"柏朝玲"+"</td><td>"+localStorage.getItem("jd2")+"</td><td>"+localStorage.getItem("wq2")+"</td><td>"+localStorage.getItem("qr2")+"</td><td>"+
         localStorage.getItem("qx2")+ "</td></tr>";
+    $(innerTD).appendTo("#biaoge");
+    people3();
+}
+
+
+function people3(){
+    var name="马秀云";
+    var QueRen = Bmob.Object.extend("All");
+    var query = new Bmob.Query(QueRen);
+    var querenshu;
+    var quxiaoshu;
+    var jiedanshu;
+    var weiqueren;
+    query.equalTo("songhuoren",name);
+    query.find({
+        success: function (results) {
+            //alert("共查询到 " + results.length + " 条记录");
+            // 循环处理查询到的数据
+            jiedanshu=results.length;
+            for (var i = 0; i < results.length; i++) {
+
+                var object = results[i];
+                localStorage.setItem("data", results[i].updatedAt);
+
+                if (localStorage.getItem("data") > startdata && localStorage.getItem("data") < enddata) {
+                    if (object.get("queren") == "f") {
+                        if (weiqueren == null) {
+                            weiqueren = 1;
+                        } else {
+                            weiqueren = weiqueren + 1;
+                        }
+                        //alert("d");
+                    }
+                    if (object.get("queren") == "t") {
+                        if (querenshu == null) {
+                            querenshu = 1;
+                        } else {
+                            querenshu = querenshu + 1;
+                        }
+                    }
+                    if (object.get("queren") == "q") {
+                        if (quxiaoshu == null) {
+                            quxiaoshu = 1;
+                        } else {
+                            quxiaoshu = quxiaoshu + 1;
+                        }
+                    }
+
+                }
+            }
+            if(quxiaoshu==null)
+            {
+                quxiaoshu=0;
+            }
+            if(querenshu==null){
+                querenshu=0;
+            }
+            if(jiedanshu==null){
+                jiedanshu=0;
+            }
+            if(weiqueren==null){
+                weiqueren=0;
+            }
+            localStorage.setItem("qx3",quxiaoshu);
+            localStorage.setItem("qr3",querenshu);
+            localStorage.setItem("jd3",jiedanshu);
+            localStorage.setItem("wq3",weiqueren);
+        },
+        error: function (error) {
+            alert("查询失败: " + error.code + " " + error.message);
+        }
+    })
+    var tb = document.getElementById("biaoge");
+    var nh = tb.insertRow();
+    var nl = nh.insertCell();
+    var innerTD = "<tr id='3' onclick='dianji(this)'style='color: black'"+"><td>"+"马秀云"+"</td><td>"+localStorage.getItem("jd3")+"</td><td>"+localStorage.getItem("wq3")+"</td><td>"+localStorage.getItem("qr3")+"</td><td>"+
+        localStorage.getItem("qx3")+ "</td></tr>";
     $(innerTD).appendTo("#biaoge");
     //people3();
 }
-
 
 //
 //function chongzhi(){
