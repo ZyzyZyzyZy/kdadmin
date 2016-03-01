@@ -9,7 +9,8 @@ window.onload=
         window.startdata="2016-02-19 21:00:00";
         window.enddata="2017-02-25 21:00:00";
         sessionStorage.setItem("n1","张越");
-        sessionStorage.setItem("n2","李显超");
+        sessionStorage.setItem("n2","柏朝玲");
+        sessionStorage.setItem("n3","马秀云");
 
 
         if(localStorage.getItem("username")=="admin"){
