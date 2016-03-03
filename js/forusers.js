@@ -15,8 +15,10 @@ window.onload=
         var y3=document.getElementById("wkdl");
         var y4=document.getElementById("zhongwu");
         var y5=document.getElementById("wanshang");
+        var y7=document.getElementById("xiawu");
         //var y4=document.getElementById("div1");
         var y6=document.getElementById("cwtx");
+        y7.style.visibility="hidden";
         y6.style.visibility="hidden";
         //y1.style.visibility="hidden";
         y1.style.visibility="hidden";
@@ -274,13 +276,14 @@ function dianji(obj){
         var y4=document.getElementById("zhongwu");
         var y5=document.getElementById("wanshang");
         var y6=document.getElementById("cwtx");
-
+        var y7=document.getElementById("xiawu");
         y1.style.visibility="hidden";
         y2.style.visibility="hidden";
         y3.style.visibility="hidden";
         y4.style.visibility="hidden";
         y5.style.visibility="hidden";
         y6.style.visibility="hidden";
+        y7.style.visibility="hidden";
 
     }else{
         var y1=document.getElementById("h2");
@@ -289,8 +292,10 @@ function dianji(obj){
         var y4=document.getElementById("zhongwu");
         var y5=document.getElementById("wanshang");
         var y6=document.getElementById("cwtx");
-        y6.style.visibility="visible";
+        var y7=document.getElementById("xiawu");
 
+        y6.style.visibility="visible";
+        y7.style.visibility="visible";
         //y1.style.visibility="visible";
         y1.style.visibility="visible";
         y2.style.visibility="visible";
@@ -339,6 +344,26 @@ function zw()
 
 }
 
+function xw(){
+    var id=parseInt(sessionStorage.getItem("dianjiid"))-1;
+    var n1="userphone"+id.toString();
+    var n2="shyphone"+id.toString();
+    var userphone=sessionStorage.getItem(n1);
+    var shyphone=sessionStorage.getItem(n2);
+    var neirong="这里是上政代取快递服务,亲爱的用户您好,您的快递订单已经收到,快递员预计在下午给您送来.快递员:"+shyphone;
+    //alert(neirong);
+    if(confirm(userphone+neirong)){
+        Bmob.Sms.requestSms({"mobilePhoneNumber":userphone,"content": neirong} ).then(function(obj) {
+            alert("发送成功"); //
+        }, function(err){
+            alert("发送失败,请手动发送");
+        });
+        //alert(userphone+neirong);
+
+    }else{
+
+    }
+}
 function ws(){
     var id=parseInt(sessionStorage.getItem("dianjiid"))-1;
     var n1="userphone"+id.toString();
